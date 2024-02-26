@@ -381,6 +381,20 @@ transition: .3s;
 
 /*=============== BUTTON ==============*/
 
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  padding: 1rem 2rem;
+  border-radius: .25rem;
+  font-size: var(--normal-font-size);
+  transition: .3s;
+}
+
+.button:hover{
+  background-color: var(--first-color-alt);
+}
+
 
 /*=============== ABOUT ===============*/
 
@@ -394,11 +408,11 @@ transition: .3s;
 }
 
 .about__img{
-  width: 30px;
+  width: 310px;
   border-radius: .5rem;
 }
 
-about__card{
+.about__card{
   width: 180px;
   position: absolute;
   right: 0;
