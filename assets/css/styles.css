@@ -542,7 +542,7 @@ transition: .3s;
 
 .popular__card:hover .popular__img{
   transform: translateY(- .25rem);
-
+}
 
 /* Swiper class */
 .swiper-pigination-bullet{
@@ -560,6 +560,8 @@ transition: .3s;
 .features{
   overflow: hidden;
   position: relative;
+  display: block;
+  text-align: center;
 }
 
 .features__container{
@@ -571,13 +573,14 @@ transition: .3s;
 .features_group{
   display: grid;
   position:relative;
-  z-index: 10;
 }
 
 
 .features__img{
+  position: relative;
   width: 158px;
   justify-self: center;
+  z-index: 10;
 }
 
 
@@ -594,20 +597,26 @@ transition: .3s;
 
 
 .features__card-1{
-  top: 4rem;
-  left: 1.5rem;
+  position: relative;
+  bottom: 270px;
+  right: 30px;
+  z-index: 10;
 }
 
 
 .features__card-2{
-  top: 8rem;
-  right : 1rem;
+  position: relative;
+  z-index: 10;
+  bottom: 400px;
+  left:200px;
 }
 
 
 .features__card-3{
-  left:1.5rem;
-  bottom: 2rem;
+  right:7px;
+  bottom: 15rem;
+  position: relative;
+  z-index: 10;
 }
 
 .features__card-title{
