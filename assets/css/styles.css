@@ -125,6 +125,12 @@ img {
   height: 300px;
 }
 
+.shape__smaller{
+  width: 180px;
+  height: 180px;
+  filter: blur(64px);
+}
+
 /*=============== HEADER & NAV ===============*/
 .header{
   width: 100%;
@@ -436,19 +442,115 @@ transition: .3s;
 
 .about__title{
   text-align: initial;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 
 }
 
 .about__description{
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 
 /*=============== POPULAR ===============*/
 
+.popular__container{
+  padding-top: 3rem;
+}
+
+.popular__card{
+  position: relative;
+  width: 238px;
+  background-color: var(--container-color);
+  padding: 2rem 1.5rem 1.5rem;
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+}
+
+.popular__card .shape__smaller{ /*refer to top about the shape__bigger and shape__smaller lines*/
+  position: absolute;
+  top: -2.5rem;
+  left: -2.5rem;
+
+}
+/*here and top lines we make it to blend the background color with the card*/
+.popular__title,
+.popular__subtitle,
+.popular__img{
+  position: relative;
+}
+
+.popular__title{
+  font-size: var(--h2-font-size);
+  margin-bottom: .25rem;
+
+}
+
+.popular__subtitle{
+  font-size: var(--normal-font-size);
+  color:var(--text-color);
+  font-weight: 400;
+}
+
+
+.popular__img{
+  width: 160px;
+  margin: .75rem 0 1.25rem 1.5rem;
+  transition: .3s;
+}
+/* we are editing inside the card, the tect and data*/
+
+.popular__data{
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: .5rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.popular__data-group{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  font-size: var(--smaller-font-size);
+  color: var(--white-color);
+}
+
+.popular__data i{
+  font-size: 1rem;
+}
+
+.popular__price{
+  font-size: var(--h3-font-size);
+}
+
+.popular__button{
+  border: none;
+  outline: none;padding: .75rem 1rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 1rem 0 1rem 0;
+  cursor: pointer;
+}
+
+.popular__button i{
+  font-size: 1.25rem;
+}
+
+/*moved the button to right and shaped it*/
+
+.popular__card:hover .popular__img{
+  transform: translateY(- .25rem);
+
 
 /* Swiper class */
+.swiper-pigination-bullet{
+  background-color: var(--text-color);
+}
+
+.swiper-pigination-bullet-active{
+  background-color: var(--first-color);
+  
+}
 
 
 /*=============== FEATURES ===============*/
