@@ -240,6 +240,10 @@ transition: .3s;
 
 /* Active link */
 
+.active-link{
+  color:var(--first-color)
+}
+
 
 /*=============== HOME ===============*/
 .home{
@@ -424,7 +428,7 @@ transition: .3s;
   right: 0;
   bottom: -2.5rem;
   background-color: hsla(0, 0%, 100%, .1);
-  backdrop-filter: bluur(16px);
+  backdrop-filter: blur(16px);
   padding: 1rem .75rem;
   text-align: center;
   border-radius: 1.25rem;
@@ -872,13 +876,14 @@ transition: .3s;
 
 .footer .shape__small{
   right: -13rem;
-  bottom: 6-rem;
+  bottom: -6rem;
   
 }
 
 
 .footer__container{
   row-gap: 2.5rem;
+  position: relative;
 }
 
 
@@ -909,17 +914,126 @@ transition: .3s;
   font-size: var(--h3-font-size);
   margin-bottom: 1.25rem;
 }
+
+.footer__links{
+  display:flex;
+  flex-direction: column;
+  row-gap: .5rem;
+}
+
+.footer__links,
+.footer__social-link{
+  color: var(--text-color);
+  transition: .3s;
+}
+
+
+.footer__links:hover,
+.footer__social-link:hover{
+  color: var(--title-color);
+}
+
+
+.footer__social{
+  display: flex;
+  column-gap: 1.5rem;
+
+}
+
+.footer__social-link{
+  font-size:1.25rem;
+
+}
+
+
+.footer__copy{
+  display:block;
+  margin-top:4.5rem;
+  text-align: center;
+}
+
 /*=============== SCROLL BAR ===============*/
 
+::-webkit-scrollbar{
+  width: .6rem;
+  background-color: hsl(219, 4%, 16%);
+  border-radius: 1rem;
+}
+
+
+::-webkit-scrollbar-thumb{
+  background-color: hsl(219, 4%, 24%);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(219, 4%, 32%);
+}
 
 /*=============== SCROLL UP ===============*/
+
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  bottom: -30%;
+  background-color: hsla(0, 0%, 100%, .1);
+  backdrop-filter: blur(16px);
+  display: inline-flex;
+  padding: .45rem;
+  border-radius: .5rem;
+  font-size: 1.15rem;
+  color: var(--white-color);
+  z-index: var(--z-tooltip);
+  transition: .4s;
+}
+
+
+.scrollup:hover{
+  transform: translateY(-.25rem);
+}
 
 
 /* Show Scroll Up*/
 
+.show-scroll{
+  bottom: 3rem;
+}
+
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen  and (max-width:320px) {
+  .container{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+}
+
+
+.home__car{
+  column-gap: 2rem;
+}
+
+.about__card{
+  width: 150px;
+}
+
+.offer__container{
+  grid-template-rows: max-content 180px;
+}
+
+.offer__img{
+  width: 340px;
+}
+
+.logos__container{
+  gap: 2.5rem;
+}
+
+.features__card{
+  width: 100px;
+}
 
 
 /* For medium devices */
