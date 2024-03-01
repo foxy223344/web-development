@@ -408,7 +408,7 @@ transition: .3s;
 
 /*=============== ABOUT ===============*/
 
-.about__countainer{
+.about__container{
   row-gap: 6rem;
 }
 
@@ -446,19 +446,19 @@ transition: .3s;
 
 .about__title{
   text-align: initial;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 
 }
 
 .about__description{
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 
 /*=============== POPULAR ===============*/
 
 .popular__container{
-  padding-top: 3rem;
+  padding-top: 1rem;
 }
 
 .popular__card{
@@ -466,8 +466,8 @@ transition: .3s;
   width: 238px;
   background-color: var(--container-color);
   padding: 2rem 1.5rem 1.5rem;
+  border-radius: 1rem;
   margin-bottom: 3.5rem;
-  border-radius: 3.5rem;
   overflow: hidden;
 }
 
@@ -477,6 +477,7 @@ transition: .3s;
   left: -2.5rem;
 
 }
+
 /*here and top lines we make it to blend the background color with the card*/
 .popular__title,
 .popular__subtitle,
@@ -545,15 +546,15 @@ transition: .3s;
 /*moved the button to right and shaped it*/
 
 .popular__card:hover .popular__img{
-  transform: translateY(- .25rem);
+  transform: translateY(-.25rem);
 }
 
 /* Swiper class */
-.swiper-pigination-bullet{
+.swiper-pagination-bullet{
   background-color: var(--text-color);
 }
 
-.swiper-pigination-bullet-active{
+.swiper-pagination-bullet-active{
   background-color: var(--first-color);
   
 }
@@ -1008,35 +1009,341 @@ transition: .3s;
     margin-right: 1rem;
   }
   
-}
 
 
-.home__car{
-  column-gap: 2rem;
-}
+  .home__car{
+    column-gap: 2rem;
+  }
 
-.about__card{
-  width: 150px;
-}
+  .about__card{
+    width: 150px;
+  }
 
-.offer__container{
-  grid-template-rows: max-content 180px;
-}
+  .offer__container{
+    grid-template-rows: max-content 180px;
+  }
 
-.offer__img{
-  width: 340px;
-}
+  .offer__img{
+    width: 340px;
+  }
 
-.logos__container{
-  gap: 2.5rem;
-}
+  .logos__container{
+    gap: 2.5rem;
+  }
 
-.features__card{
-  width: 100px;
-}
+  .features__map{
+    width: 350px;
+  }
+
+  .features__card{
+
+    width: 100px;
+  }
+
+  .features__img{
+    width: 120px;
+    }
+
+    .features__card-1{
+      bottom: 200px;
+      right: -7px;
+    }
+
+    .features__card-2{
+      bottom: 400px;
+      left: 180px;
+      
+    }
+    
+    .features__card-3{
+      bottom: 15rem;
+      right: -7px;}
+  
+  }
 
 
 /* For medium devices */
 
+@media screen and (min-width: 576px){
+  .about__group{
+    width: 350px;
+    justify-self: center;
+  }
+
+
+  .features__map{
+    left: 0px;
+    right: -50px;
+  }
+
+  .featured__content{
+    grid-template-columns: repeat(2, 280px);
+  }
+
+  .offer__container{
+    grid-template-rows: initial;
+    grid-template-columns: .5fr;
+    justify-content: center;
+  }
+
+  .offer__img{
+    position: relative;
+    bottom: initial;
+    right: initial;
+  }
+
+  .offer__data{
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .section{
+    padding: 7rem 0 2rem;
+  }
+
+
+  .nav{
+    height: calc(var(--header-height) + 1.5rem);
+  }
+
+  .nav__toggle,
+  .nav__close{
+    display:none;
+  }
+  
+.nav__list{
+  flex-direction: row;
+  column-gap: 3rem;
+  padding-top: 0;
+}
+
+.nav__link{
+  font-size: var(--normal-font-size);
+  text-transform: initial;
+
+}
+
+.about__container{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.logos__container{
+  gap: 4rem 8rem;
+}
+
+.footer__container{
+  grid-template-columns: repeat(2, 1fr);
+
+}
+}
 
 /* For large devices */
+
+
+@media screen and (min-width: 1040px){
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .shape__big{
+    width: 500px;
+    height: 500px;
+  }
+
+  .shape__small{
+    width: 400px;
+    height: 400px;
+  }
+
+  .home__container{
+    padding-top: 2rem;
+  }
+
+
+  .home__img{
+    width: 380px;
+  }
+
+  .home__car{
+    column-gap: 7rem;
+  }
+
+  .home__car-icon{
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+
+  .about__container{
+    column-gap: 6rem;
+    align-items: center;
+  }
+
+  .about__group,
+  .about__img{
+    width: 480px;
+  }
+
+  .about__card{
+    width: 198px;
+    padding: 1rem, 1.25rem;
+  }
+
+  .about__description{
+    padding-right: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .popular__cntainer{
+    padding-top: 3rem;
+    width: 875px;
+  }
+
+  .popular__card{
+    width: 258px;
+    border-radius: 1.25rem;
+    margin-bottom: 5rem;
+  }
+
+  .popular__img{
+    width: 180px;
+    margin: .75rem 0 1.25rem 2rem;
+  }
+
+  .features__container{
+    padding: 2rem 0 3rem;
+  }
+
+  .features__img{
+    width: 200px;
+  }
+
+  .features__card{
+    width: 127x;
+    padding: .75rem 2.5rem;
+  }
+
+  .features__card-1{
+    bottom: 300px;
+    right: 30px;
+  }
+
+  .features__card-2{
+    bottom: 400px;
+    left: 200px;
+  }
+
+  .features__card-3{
+    bottom: 15rem;
+    right: 7px;
+  }
+
+  .features__map{
+    width: 650px;
+    top: 11rem;
+  }
+
+
+  .featured__container{
+    padding-top: 2.5rem;
+  }
+
+  .featured__filters{
+    column-gap: 2rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .featured__item{
+    width: 52px;
+    height: 52px;
+  }
+
+
+    .featured__item img{
+      width: 2em;
+    }
+
+    .featured__content{
+      grid-template-columns: repeat(3, 248px);
+      gap: 4rem;
+    }
+
+    .offer__container{
+      grid-template-columns: repeat(2,1fr);
+      column-gap: 5rem;
+      align-items: center;
+      padding-bottom: 2rem;
+    }
+
+    .offer__data,
+    .offer__title{
+      text-align: initial;
+    }
+
+    .offer__data{
+      margin-bottom: 0;;
+    }
+
+    .offer__description{
+      padding-right: 6rem;
+    }
+
+    .offer__img{
+      width: 450px;
+    }
+
+
+    .logos__container{
+      grid-template-columns: repeat(6, max-content);
+    }
+
+    .logos__img{
+      width: 50px;
+    }
+
+    .footer__container{
+      grid-template-columns: repeat(4, max-content);
+      justify-content: space-between;
+    }
+
+    .footer__logo{
+      column-gap: .5rem;
+    }
+
+    footer__logo i{
+      font-size: 2rem;
+    }
+
+
+    .footer__title{
+      margin-bottom: 1.5rem;
+    }
+
+    .footer__links{
+      row-gap: .75rem;
+    }
+
+    .footer__social-link{
+      font-size: 1.5rem;
+    }
+
+    .footer__copy{
+      margin-top: 8rem;
+      padding-bottom: 1rem;
+    }
+
+
+    .scrollup{
+      right: 3rem;
+    }
+
+
+
+
+
+}
+
+
